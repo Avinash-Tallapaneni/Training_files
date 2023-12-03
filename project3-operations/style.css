@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-color: rgb(30 41 59);
+  --color: rgb(245, 238, 238);
+  --padding1: 1rem;
+  --padding2: 2rem;
+  --fontsize: 1.25rem;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--bg-color);
+  color: var(--color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.75rem;
+}
+
+header span {
+  font-size: var(--fontsize);
+}
+
+.main_body {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: var(--padding1) var(--padding2);
+  gap: 2rem;
+}
+
+aside,
+aside > div {
+  display: flex;
+  flex-direction: column;
+}
+
+aside,
+.main_body section {
+  gap: 1rem;
+  outline: 1px dashed wheat;
+  padding: calc(var(--padding1) / 2);
+  border-radius: 0.5rem;
+}
+
+.main_body section {
+  flex: 1;
+  height: 100%;
+}
+
+.exampleHeader,
+aside > div > span:first-child {
+  font-size: var(--fontsize);
+}
+
+aside > div > span:last-child {
+  color: wheat;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  font-size: var(--fontsize);
+  max-width: 60rem;
+}
+
+section > span {
+  font-size: var(--fontsize);
+  text-align: center;
+  width: 100%;
+}
+
+.display_output {
+  background-color: black;
+  width: 90%;
+  max-width: 90%;
+  /* min-height: 10rem; */
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: var(--padding1);
+  border-radius: 0.5rem;
+  font-size: 1rem;
+}
+
+.display_output > p {
+  display: flex;
+  gap: 3rem;
+}
+
+.functionCall,
+.functionResult {
+  font-size: 1.5rem;
+}
+
+.functionResult {
+  word-break: break-all;
+  letter-spacing: 2px;
+}

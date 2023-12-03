@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form validation</title>
+    <link rel="shortcut icon" href="./TalAvi.png" type="image/png" />
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Font Awesome CDN -->
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body class="flex flex-col items-center bg-slate-800 w-full h-screen pt-5">
+    <div
+      class="mainForm text-white flex flex-col gap-5 w-[900px] bg-slate-700 p-5 rounded-md"
+    >
+      <div class="text-5xl flex justify-center text-center">
+        <h1>Form Validation</h1>
+      </div>
+      <form action="" class="form flex flex-col gap-4">
+        <!-- Name input and Error Message -->
+
+        <div class="name flex flex-col gap-2 text-slate-200 font-semibold">
+          <label for="name">Enter your Name</label>
+
+          <input
+            class="p-2 rounded-md bg-slate-800 ring-1 outline-none placeholder:text-slate-600"
+            type="text"
+            name=""
+            id="name"
+            placeholder="name"
+          />
+          <small class="text-red-500 px-2">
+            <i class="fa-solid fa-triangle-exclamation"></i>
+            <span> Name is Invalid </span>
+          </small>
+        </div>
+
+        <!-- Email input and Error Message -->
+
+        <div class="email flex flex-col gap-2 text-slate-200 font-semibold">
+          <label for="email">Enter your Email ID</label>
+
+          <input
+            class="p-2 rounded-md bg-slate-800 ring-1 outline-none placeholder:text-slate-600"
+            type="email"
+            name=""
+            id="email"
+            placeholder="email"
+          />
+          <small class="text-red-500 px-2">
+            <i class="fa-solid fa-triangle-exclamation"></i>
+            <span> Email is invalid </span>
+          </small>
+        </div>
+
+        <!-- Password input and Error Message -->
+
+        <div class="password flex flex-col gap-2 text-slate-200 font-semibold">
+          <label for="password">password</label>
+
+          <div
+            class="flex items-center bg-slate-800 rounded-md ring-1 outline-none"
+          >
+            <input
+              class="p-2 rounded-md flex-1 bg-slate-800 outline-none placeholder:text-slate-600"
+              type="password"
+              name=""
+              id="password"
+              placeholder="password"
+            />
+            <div class="eye text-slate-500 cursor-pointer px-2">
+              <i class="fa-solid fa-eye"></i>
+              <i class="fa-solid fa-eye-slash hidden"></i>
+            </div>
+          </div>
+
+          <div class="errorMessage flex flex-col">
+            <small class="length text-red-500 px-2">
+              <i class="fa-solid fa-triangle-exclamation"></i>
+              <span> be atlease 8 characters long. </span>
+            </small>
+            <small class="number text-red-500 px-2">
+              <i class="fa-solid fa-triangle-exclamation"></i>
+              <span> contain atleast 1 number (0...9) </span>
+            </small>
+            <small class="lowercases text-red-500 px-2">
+              <i class="fa-solid fa-triangle-exclamation"></i>
+              <span> contain atleast 1 lowercase letter (a...z) </span>
+            </small>
+            <small class="uppercases text-red-500 px-2">
+              <i class="fa-solid fa-triangle-exclamation"></i>
+              <span> Should contain atleast 1 uppercase letter (A...Z) </span>
+            </small>
+            <small class="special text-red-500 px-2">
+              <i class="fa-solid fa-triangle-exclamation"></i>
+              <span> contain atleast 1 special symbol (!...$) </span>
+            </small>
+          </div>
+        </div>
+
+        <!-- Url input and Error Message -->
+
+        <div class="urlBox flex flex-col gap-2 text-slate-200 font-semibold">
+          <label for="url">URL</label>
+
+          <input
+            class="p-2 rounded-md bg-slate-800 placeholder:text-slate-600 ring-1 outline-none"
+            type="url"
+            name=""
+            id="url"
+            placeholder="Enter URL here"
+          />
+          <small class="urlErrorMessage text-red-500 px-2">
+            <i class="fa-solid fa-triangle-exclamation"></i>
+            <span> URL is Invalid. URL starts with HTTP/HTTPS </span>
+          </small>
+        </div>
+
+        <!-- TextArea input and Error Message -->
+
+        <div class="textArea flex flex-col gap-2 text-slate-200 font-semibold">
+          <label for="textArea">Text Area</label>
+
+          <textarea
+            name=""
+            id="textArea"
+            cols="30"
+            rows="4"
+            class="bg-slate-800 ring-1 outline-none rounded-md"
+          ></textarea>
+          <small class="text-red-500 px-2">
+            <i class="fa-solid fa-triangle-exclamation"></i>
+            <span>
+              Text area is Invalid. Will only accepts Alphabets, period(.) and
+              spaces
+            </span>
+          </small>
+        </div>
+
+        <!-- File Upload and Error Message -->
+
+        <div
+          class="fileUploadBox flex flex-col gap-2 text-slate-200 font-semibold"
+        >
+          <label for="url">URL</label>
+
+          <input
+            class="fileUpload p-2 rounded-md bg-slate-800 ring-1 outline-none"
+            type="file"
+            name=""
+            id="file"
+            placeholder="Enter URL here"
+          />
+          <small class="fileUploadErrorMessage text-red-500 px-2">
+            <i class="fa-solid fa-triangle-exclamation"></i>
+            <span>
+              File upload is Invalid. Acceptable file format are PDF, png
+            </span>
+          </small>
+        </div>
+
+        <button
+          type="submit"
+          class="submit disabled w-fit mx-auto text-lg rounded-md px-3 p-1"
+        >
+          Submit
+        </button>
+      </form>
+    </div>
+
+    <div class="formMessage hidden my-auto text-3xl text-green-500">
+      <span> File sent sucessfully </span>
+      <i class="fa-solid fa-circle-check"></i>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

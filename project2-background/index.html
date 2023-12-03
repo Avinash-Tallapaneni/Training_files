@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <!-- Background display console,
+         where color changes when buttons are clicked -->
+
+      <div class="display__color">
+        <span></span>
+      </div>
+
+      <!-- Button container, with buttons having hard coded color attribues -->
+
+      <div class="main__button-group">
+        <button data-color="#FF6347">
+          <span>Tomato Red</span> <span> #FF6347</span>
+        </button>
+        <button data-color="#FFD700">
+          <span>Gold</span> <span> #FFD700</span>
+        </button>
+        <button data-color="#FF69B4">
+          <span>Hot pink</span> <span> #FF69B4</span>
+        </button>
+        <button data-color="#00FF00">
+          <span>Lime Green</span> <span> #00FF00</span>
+        </button>
+        <button data-color="#FF4500">
+          <span>Orange Red</span> <span> #FF4500</span>
+        </button>
+        <button data-color="#1E90FF">
+          <span>Dodger Blue</span> <span> #1E90FF</span>
+        </button>
+        <button data-color="#FF8C00">
+          <span>Orange</span> <span> #FF8C00</span>
+        </button>
+        <button data-color="#8A2BE2">
+          <span>Blue violet</span> <span> #8A2BE2</span>
+        </button>
+        <button data-color="#00CED1">
+          <span>Dark turquoise</span> <span> #00CED1</span>
+        </button>
+        <button data-color="#FF1493">
+          <span>Deep Pink</span> <span> #FF1493</span>
+        </button>
+      </div>
+
+      <!-- Color picker for user to pick  -->
+
+      <div class="custom_color_picker">
+        <label for="color_picker">Custom color Picker</label>
+        <input type="color" id="color_picker" />
+        <span class="color_picker_text">#000000</span>
+      </div>
+    </main>
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>

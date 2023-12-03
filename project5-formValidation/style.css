@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.invalid {
+  @apply ring-red-500;
+}
+.valid {
+  @apply ring-green-500;
+}
+
+.eye > .hidden {
+  display: none;
+}
+
+.disabled {
+  @apply bg-slate-700 ring-1;
+}
+.enabled {
+  @apply bg-green-800;
+}
