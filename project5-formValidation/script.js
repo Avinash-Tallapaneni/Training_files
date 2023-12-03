@@ -73,6 +73,41 @@ emailInputBox.addEventListener("input", (e) => {
   formSubmit();
 });
 
+const numberInputBox = document.querySelector(".number > input");
+const numberErrorMessage = document.querySelector(".number > small ");
+
+numberInputBox.addEventListener("input", (e) => {
+  const numberInput = parseInt(e.target.value);
+  const numberRegex = /[0-9]/;
+
+  const numberValidation = numberRegex.test(numberInput);
+
+  if (numberValidation) {
+    numberErrorMessage.classList.remove("text-red-500");
+    numberErrorMessage.classList.add("text-green-500");
+    numberErrorMessage.firstElementChild.classList.remove(
+      "fa-triangle-exclamation"
+    );
+    numberErrorMessage.firstElementChild.classList.add("fa-circle-check");
+    numberErrorMessage.lastElementChild.textContent = "Number is valid";
+    numberInputBox.classList.add("valid");
+    numberInputBox.classList.remove("invalid");
+    formValidation.number = true;
+  } else {
+    numberErrorMessage.classList.add("text-red-500");
+    numberErrorMessage.classList.remove("text-green-500");
+    numberErrorMessage.firstElementChild.classList.add(
+      "fa-triangle-exclamation"
+    );
+    numberErrorMessage.firstElementChild.classList.remove("fa-circle-check");
+    numberErrorMessage.lastElementChild.textContent = "Number is Invalid";
+    numberInputBox.classList.add("invalid");
+    numberInputBox.classList.remove("valid");
+    formValidation.number = false;
+  }
+  formSubmit();
+});
+
 /*------Password validation and possword toggle-------- */
 
 const passwordInputBox = document.querySelector(".password > div >input");
@@ -260,6 +295,7 @@ fileUploadButton.addEventListener("change", (e) => {
 const formValidation = {
   name: false,
   email: false,
+  number: false,
   password: false,
   url: false,
   textarea: false,

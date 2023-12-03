@@ -61,6 +61,24 @@
           </small>
         </div>
 
+        <!-- Number input and Error Message -->
+
+        <div class="number flex flex-col gap-2 text-slate-200 font-semibold">
+          <label for="number">Enter a Number </label>
+
+          <input
+            class="p-2 rounded-md bg-slate-800 ring-1 outline-none placeholder:text-slate-600"
+            type="text"
+            name=""
+            id="number"
+            placeholder="number"
+          />
+          <small class="text-red-500 px-2">
+            <i class="fa-solid fa-triangle-exclamation"></i>
+            <span> Number is invalid </span>
+          </small>
+        </div>
+
         <!-- Password input and Error Message -->
 
         <div class="password flex flex-col gap-2 text-slate-200 font-semibold">
@@ -134,7 +152,7 @@
             id="textArea"
             cols="30"
             rows="4"
-            class="bg-slate-800 ring-1 outline-none rounded-md"
+            class="bg-slate-800 ring-1 outline-none rounded-md p-2"
           ></textarea>
           <small class="text-red-500 px-2">
             <i class="fa-solid fa-triangle-exclamation"></i>
@@ -150,7 +168,7 @@
         <div
           class="fileUploadBox flex flex-col gap-2 text-slate-200 font-semibold"
         >
-          <label for="url">URL</label>
+          <label for="file">File</label>
 
           <input
             class="fileUpload p-2 rounded-md bg-slate-800 ring-1 outline-none"

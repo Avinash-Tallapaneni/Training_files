@@ -3,25 +3,21 @@
 const displayColor = document.querySelector(".display__color");
 const buttonGroup = document.querySelectorAll("button");
 
-/*----------Looping through button to get-------------- 
---------data attibutes and set the button color-------- */
+/*----------Looping through button to get----------
+--------------data attibutes and set the ----------
+-----------button color and  display color------- */
 
 buttonGroup.forEach((button) => {
   button.style.backgroundColor = button.dataset.color;
-});
 
-/*----------Looping through button to get-------------- 
---------data attibutes and set the display color------- */
-
-buttonGroup.forEach((button) =>
   button.addEventListener("click", (e) => {
     const colorSet = e.target.closest("button").dataset.color;
     displayColor.style.backgroundColor = colorSet;
     displayColor.querySelector(
       "span"
     ).textContent = `Background color set to ${colorSet}`;
-  })
-);
+  });
+});
 
 /*-------Setting display color based on the input------ */
 

@@ -32,6 +32,9 @@ const primenumber = (value) => {
 const fibonacci = (value) => {
   functionCall.textContent = `fibonacci(${value})`;
 
+  if (typeof value !== "number") {
+    functionResult.textContent = "Please Enter a valid Number";
+  }
   if (value < 0) {
     return (functionResult.textContent = `Please Enter a positive Number`);
   }
