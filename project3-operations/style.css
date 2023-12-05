@@ -21,9 +21,11 @@ body {
   background-color: var(--bg-color);
   color: var(--color);
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   font-family: "Poppins", sans-serif;
+  padding: 3rem;
 }
 
 main {
@@ -124,4 +126,17 @@ section > span {
 .functionResult {
   word-break: break-all;
   letter-spacing: 2px;
+}
+
+.footer-container {
+  font-size: calc(var(--fontsize) * 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  color: var(--color);
+}
+a {
+  text-decoration: none;
+  color: var(--color);
 }

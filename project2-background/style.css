@@ -21,9 +21,11 @@ body {
   width: 100vw;
   background-color: var(--bg-color);
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   font-family: "Poppins", sans-serif;
+  padding: 3rem;
 }
 
 main {
@@ -100,4 +102,17 @@ input {
 
 .custom_color_picker span {
   text-align: center;
+}
+
+.footer-container {
+  font-size: calc(var(--fontsize) * 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  color: var(--color);
+}
+a {
+  text-decoration: none;
+  color: var(--color);
 }
