@@ -14,7 +14,12 @@
 - Mouse events (Project 1) - [https://mouseevents.vercel.app/](https://mouseevents.vercel.app/)
 - Background Color (Project 2) - [https://backgroundcolor.vercel.app/](https://backgroundcolor.vercel.app/)
 - Browser Operations (Project 3) - [https://browseroperation.vercel.app/](https://browseroperation.vercel.app/)
-- Form validation (Project 4) - [https://mouseevents.vercel.app/](https://mouseevents.vercel.app/)
+- To-do Alarm (Project 4) - [https://todo-alarm-nine.vercel.app/](https://todo-alarm-nine.vercel.app/)
+- Form validation (Project 5) - [https://form-input-validation.vercel.app/](https://form-input-validation.vercel.app/)
+- Receipe Book (Project 6) - [https://receipe-book.vercel.app/](https://receipe-book.vercel.app/)
+- Color Picker (Project 8) - [https://currency-convertor-omega.vercel.app/](https://currency-convertor-omega.vercel.app/)
+- Currency Convertor (Project 9) - [https://currency-convertor-omega.vercel.app/](https://currency-convertor-omega.vercel.app/)
+- Weather App (Project 10) - [https://weatherapp-two-gray.vercel.app/](https://weatherapp-two-gray.vercel.app/)
 
 # Contributing
 
