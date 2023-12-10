@@ -7,9 +7,14 @@ const nameErrorMessage = document.querySelector(".name > small ");
 
 nameInputBox.addEventListener("input", (e) => {
   const nameInput = e.target.value;
+
+  /*------name regex, will accept only Alphabets, and min 3 character-------- */
+
   const nameRegex = /^[a-zA-Z\s]{3,}$/;
 
   const nameValidation = nameRegex.test(nameInput);
+
+  /*--If validation fails, appropriate mesage is set and class is added/removed-- */
 
   if (nameValidation) {
     nameErrorMessage.classList.remove("text-red-500");
@@ -42,10 +47,15 @@ const emailErrorMessage = document.querySelector(".email > small ");
 
 emailInputBox.addEventListener("input", (e) => {
   const emailInput = e.target.value;
+
+  /*------email regex, will accept valid email-------- */
+
   const emailRegex =
     /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
   const emailValidation = emailRegex.test(emailInput);
+
+  /*--If validation fails, appropriate mesage is set and class is added/removed-- */
 
   if (emailValidation) {
     emailErrorMessage.classList.remove("text-red-500");
@@ -78,9 +88,14 @@ const numberErrorMessage = document.querySelector(".number > small ");
 
 numberInputBox.addEventListener("input", (e) => {
   const numberInput = parseInt(e.target.value);
+
+  /*------number regex, will accept numbers-------- */
+
   const numberRegex = /[0-9]/;
 
   const numberValidation = numberRegex.test(numberInput);
+
+  /*--If validation fails, appropriate mesage is set and class is added/removed-- */
 
   if (numberValidation) {
     numberErrorMessage.classList.remove("text-red-500");
@@ -114,6 +129,8 @@ const passwordInputBox = document.querySelector(".password > div >input");
 const passwordToggle = document.querySelector(".eye");
 const passwordErrorMessage = document.querySelectorAll(".errorMessage > small");
 
+/*------Event to toggle password from hide to show-------- */
+
 passwordToggle.addEventListener("click", () => {
   if (passwordToggle.firstElementChild.classList.contains("hidden")) {
     passwordInputBox.setAttribute("type", "password");
@@ -128,6 +145,8 @@ passwordToggle.addEventListener("click", () => {
 
 passwordInputBox.addEventListener("input", (e) => {
   const passwordInput = e.target.value;
+
+  /*------password regex object-------- */
 
   const passwordRegex = {
     length: /^.{8}/,
@@ -145,11 +164,16 @@ passwordInputBox.addEventListener("input", (e) => {
     special: passwordRegex.special.test(passwordInput),
   };
 
+  /*------Looping through passwordvalidation, using every loop will return true---
+    ---------------------------------if all are true----------------------------- */
+
   if (Object.values(passwordValidation).every((field) => field)) {
     formValidation.password = true;
   } else {
     formValidation.password = false;
   }
+
+  /*--If one of the validation fails, appropriate mesage is set and class is added/removed-- */
 
   passwordErrorMessage.forEach((msg) => {
     if (passwordValidation[msg.classList[0]]) {
@@ -179,10 +203,14 @@ const urlErrorMessage = document.querySelector(".urlErrorMessage");
 urlInputBox.addEventListener("input", (e) => {
   const urlInput = e.target.value;
 
+  /*------url regex, will accept starting with https/http and valid url -------- */
+
   const urlRegex =
     /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)/;
 
   const urlValidation = urlRegex.test(urlInput);
+
+  /*--If validation fails, appropriate mesage is set and class is added/removed-- */
 
   if (urlValidation) {
     urlErrorMessage.classList.remove("text-red-500");
@@ -216,9 +244,14 @@ const textAreaErrorMessage = document.querySelector(".textArea > small");
 
 textAreaBox.addEventListener("input", (e) => {
   const textAreaInput = e.target.value;
+
+  /*------textarea regex, will accept only Alphabets, period(.) and spaces-------- */
+
   const textAreaRegex = /^[a-zA-Z\s.]+$/;
 
   const textAreaValidation = textAreaRegex.test(textAreaInput);
+
+  /*--If validation fails, appropriate mesage is set and class is added/removed-- */
 
   if (textAreaValidation) {
     textAreaErrorMessage.classList.remove("text-red-500");
@@ -256,9 +289,13 @@ const fileUploadErrorMessage = document.querySelector(
 );
 
 fileUploadButton.addEventListener("change", (e) => {
+  /*------acceptable file types are set as png and pdf-------- */
+
   const acceptableFileTypes = ["image/png", "application/pdf"];
   const fileUploadedType = e.target.files[0].type;
   const fileValidation = acceptableFileTypes.includes(fileUploadedType);
+
+  /*--If validation fails, appropriate mesage is set and class is added/removed-- */
 
   if (fileValidation) {
     fileUploadErrorMessage.classList.remove("text-red-500");
@@ -303,6 +340,8 @@ const formValidation = {
 };
 
 const formSubmit = () => {
+  /*--If all validation passes, then submit button is enabled to submit the form-- */
+
   const formValid = Object.values(formValidation).every((field) => field);
   const formSubmitbutton = document.querySelector(".submit");
   const mainForm = document.querySelector(".mainForm");

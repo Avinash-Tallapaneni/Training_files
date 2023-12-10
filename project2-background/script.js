@@ -3,9 +3,13 @@
 const displayColor = document.querySelector(".display__color");
 const buttonGroup = document.querySelectorAll("button");
 
-/*----------Looping through button to get----------
---------------data attibutes and set the ----------
------------button color and  display color------- */
+
+
+/*----------Adding event listners to each button by looping through it--------
+---------- To prevent event bubbling, im targeting closest button class-------
+-------------------to get data attibutes named color, which is---------------- 
+---------------------- set as the display background color------------------*/
+
 
 buttonGroup.forEach((button) => {
   button.style.backgroundColor = button.dataset.color;
@@ -19,7 +23,10 @@ buttonGroup.forEach((button) => {
   });
 });
 
-/*-------Setting display color based on the input------ */
+
+
+/*----------------Obtaining Hex code from input value to--------------
+-----------------set the display color based on the input----------- */
 
 const colorPicker = document.querySelector("#color_picker");
 const colorPickerText = document.querySelector(".color_picker_text");

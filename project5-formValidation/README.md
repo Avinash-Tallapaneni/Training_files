@@ -11,9 +11,16 @@
 
 ## Screenshot
 
-### Desktop version
+## Desktop version
 
-![](./fullpage.png)
+### Form version with valid credentials
+
+![](./formFilled.png)
+
+
+### Form version with invalid credentials
+
+![](./Fullscreenshot.png)
 
 ## Getting Started
 
@@ -49,7 +56,7 @@ Contributions to the Form validations are welcome! If you find any bugs or have 
 
 My name is Avinash Tallapaneni, and I am a front-end web developer passionate about creating immersive and engaging user experiences. Form validations is a project that showcases my skills and dedication to building high-quality web applications.
 
-- GitHub - [Your GitHub Profile](https://github.com/avinash-tallapaneni)
+- GitHub - [GitHub Profile](https://github.com/avinash-tallapaneni)
 - Twitter - [Twitter Profile](https://twitter.com/TallapaneniAvi)
 
 ## Feedback

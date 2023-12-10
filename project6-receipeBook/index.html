@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Receipe book</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="header">
+      <p>Receipe Cards</p>
+      <button class="addReceipe">Add Receipe</button>
+    </div>
+    <main class="main">
+      <!-- <div class="card">
+        <p class="title">Receipe Name</p>
+        <div class="image">
+          <img src="https://placehold.co/300x150" alt="" srcset="" />
+        </div>
+        <div class="ingredients">
+          <p>Instructions</p>
+          <li>"2 tbsp olive oil",</li>
+          <li>"knob butter",</li>
+          <li>"1 onion, finely chopped",</li>
+          <li>"500g sausagemeat or skinned sausages",</li>
+          <li>"grated zest of 1 lemon",</li>
+        </div>
+
+        <div class="instructions">
+          <p>Instructions</p>
+
+          <li>
+            "Heat oven to 190C/fan 170C/gas 5. Heat 1 tbsp oil and the butter in
+            a frying pan, then add the onion and fry for 5 mins until softened.
+            Cool slightly. Tip the sausagemeat, lemon zest, breadcrumbs,
+            apricots, chestnuts and thyme into a bowl. Add the onion and
+            cranberries, and mix everything together with your hands, adding
+            plenty of pepper and a little salt. Cut each chicken breast into
+            three fillets lengthwise and season all over with salt and pepper.
+            Heat the remaining oil in the frying pan, and fry the chicken
+            fillets quickly until browned, about 6-8 mins. Roll out two-thirds
+            of the pastry to line a 20-23cm springform or deep loose-based tart
+            tin. Press in half the sausage mix and spread to level. Then add the
+            chicken pieces in one layer and cover with the rest of the sausage.
+            Press down lightly. Roll out the remaining pastry. Brush the edges
+            of the pastry with beaten egg and cover with the pastry lid. Pinch
+            the edges to seal, then trim. Brush the top of the pie with egg,
+            then roll out the trimmings to make holly leaf shapes and berries.
+            Decorate the pie and brush again with egg. Set the tin on a baking
+            sheet and bake for 50-60 mins, then cool in the tin for 15 mins.
+            Remove and leave to cool completely. Serve with a winter salad and
+            pickles.",
+          </li>
+        </div>
+      </div> -->
+    </main>
+
+    <div class="modal">
+      <form>
+        <div>
+          <label for="receipeName">Receipe Name</label>
+          <input
+            type="text"
+            class="receipeName"
+            name="receipeName"
+            placeholder="Enter your Receipe Name"
+            required
+          />
+        </div>
+        <div>
+          <label for="imageUrl">Image URL</label>
+          <input
+            type="text"
+            class="imageUrl"
+            name="imageUrl"
+            placeholder="Enter image URL"
+          />
+        </div>
+        <div>
+          <label for="instructions">Instructions</label>
+          <textarea
+            class="instructionsForm"
+            name="instructions"
+            rows="4"
+            placeholder="Enter instructions"
+            required
+          ></textarea>
+        </div>
+
+        <div>
+          <label for="ingredients">Ingredients</label>
+          <div class="chipsContainer"></div>
+          <div class="ingredientsContainer">
+            <input
+              type="text"
+              class="ingredientsForm"
+              name="ingredients"
+              placeholder="Enter ingredients"
+            />
+            <button type="button" class="addIngredient">Add</button>
+          </div>
+        </div>
+        <div class="buttonCTA">
+          <button class="submit" type="submit">Submit Recipe</button>
+          <button class="cancel">cancel</button>
+        </div>
+      </form>
+    </div>
+
+    <script type="module" src="script.js"></script>
+  </body>
+</html>

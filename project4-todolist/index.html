@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/TalAvin.png" />
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List </title> 
+  </head>
+  <body>
+    <main
+      class="w-full h-screen bg-slate-800 flex flex-col items-center justify-start text-slate-200 pt-[2rem] gap-10"
+    >
+      <header class="text-5xl">To-Do list with Alarm</header>
+
+      <div
+        class="main_section w-full h-full grid grid-cols-3 gap-10 items-start place-items-center p-5"
+      >
+        <section class="w-[20rem] h-full flex flex-col justify-end py-5 gap-4">
+          <p class="text-4xl whitespace-nowrap text-center">Completed Task</p>
+          <div
+            class="histroyContainer w-full min-h-[25rem] rounded-md py-4 p-2 border-2 border-dashed border-blue-400 flex flex-col gap-4"
+          ></div>
+        </section>
+        <section
+          class="todoContainer w-[30rem] h-full rounded-md p-2 border-2 border-dashed border-blue-400 flex flex-col gap-2"
+        ></section>
+
+        <section class="w-[25rem]">
+          <div
+            class="rounded-md p-2 border-2 border-dashed border-blue-400 flex flex-col gap-4"
+          >
+            <p class="text-3xl text-center">Add task</p>
+            <div class="flex gap-2 justify-between">
+              <label for="todoTitle" class="font-semibold text-lg">Title</label>
+              <input
+                type="text"
+                name=""
+                id="todoTitle"
+                placeholder="eg: Breakfast"
+                class="bg-transparent outline-dashed outline-blue-400 outline-2 rounded-sm px-1 p-[0.125rem]"
+              />
+            </div>
+
+            <div class="flex gap-2 justify-between">
+              <label for="todoTime" class="font-semibold text-lg">Timing</label>
+              <div class="timer flex gap-3">
+                <div
+                  class="flex outline-dashed outline-blue-400 outline-2 rounded-sm px-1 p-[0.125rem]"
+                >
+                  <input
+                    type="number"
+                    name=""
+                    id="todoTime"
+                    min="00"
+                    placeholder="00"
+                    class="hours bg-transparent w-10 text-center outline-none"
+                  />
+                  <span>hr</span>
+                </div>
+                <div
+                  class="flex outline-dashed outline-blue-400 outline-2 rounded-sm px-1 p-[0.125rem]"
+                >
+                  <input
+                    type="number"
+                    name=""
+                    id="todoTime"
+                    min="00"
+                    placeholder="00"
+                    class="minutes bg-transparent w-10 text-center outline-none"
+                  />
+                  <span>min</span>
+                </div>
+                <div
+                  class="flex outline-dashed outline-blue-400 outline-2 rounded-sm px-1 p-[0.125rem]"
+                >
+                  <input
+                    type="number"
+                    name=""
+                    id="todoTime"
+                    min="00"
+                    placeholder="00"
+                    class="seconds bg-transparent w-10 text-center outline-none"
+                  />
+                  <span>sec</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex items-center justify-center pt-4">
+              <button
+                class="addtask bg-green-400 text-slate-700 p-1 px-2 rounded-sm font-semibold"
+              >
+                Add Task
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
